@@ -6,16 +6,11 @@ import (
 	"net/http"
 )
 
-var upgrader = websocket.Upgrader{
-	ReadBufferSize:  1024,
-	WriteBufferSize: 1024,
-}
-
 func initializeWebsocket() {
 	http.HandleFunc("/ws", func(writer http.ResponseWriter, request *http.Request) {
-		conn, err := upgrader.Upgrade(writer, request, nil)
+		conn, err := websocket.Upgrade(writer, request, nil, 1024, 1024)
 		if err != nil {
-			fmt.Println("Fail to upgrade http connection to ws")
+			fmt.Println("Fail to upgrade http connection to ws, cause: " + err.Error())
 			return
 		}
 		defer conn.Close()
