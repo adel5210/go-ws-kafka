@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"goWebsocketKafka/internal/server"
+	"github.com/adel5210/goWebsocketKafka/internal/server"
 	"os"
 	"os/signal"
 	"syscall"
