@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: go-ws-kafka-pod
+spec:
+  containers:
+    - name: go-ws-kafka-container01
+      image: adel5210/go-websocket-kafka-backend:1.0.1
+      ports:
+        - containerPort: 8090

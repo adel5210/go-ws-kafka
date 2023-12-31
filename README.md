@@ -13,3 +13,15 @@
 - docker images
 - docker tag go-ws-kafka adel5210/go-websocket-kafka-backend:1.0.0
 - docker push adel5210/go-websocket-kafka-backend:1.0.0
+### Kube setup attempt 1
+- kubectl create -f kube-go-ws-kafka-pod.yml
+- kubectl get pods
+- kubectl get svc
+### Kube setup attempt 2
+- kubectl run go-ws-kafka --image=adel5210/go-websocket-kafka-backend:1.0.1 --port=8090
+- kubectl port-forward go-ws-kafka 8090:8090
+### Kube setup attempt 3
+- kubectl create deployment go-ws-kafka --image=adel5210/go-websocket-kafka-backend:1.0.1
+- kubectl expose deployment go-ws-kafka --type=NodePort --port=8090
+- kubectl get svc
+- minikube service go-ws-kafka --url
