@@ -3,6 +3,6 @@ version: '3'
 services:
   go-ws-kafka:
     build:
-      context: .
+      context: ""
     ports:
       - 8090:8090

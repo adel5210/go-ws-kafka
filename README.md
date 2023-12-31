@@ -25,3 +25,5 @@
 - kubectl expose deployment go-ws-kafka --type=NodePort --port=8090
 - kubectl get svc
 - minikube service go-ws-kafka --url
+### Kube setup attempt 4
+- kubectl apply -f k8s/deployment.yaml 

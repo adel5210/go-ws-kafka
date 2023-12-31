@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-ws-kafka-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-ws-kafka
+  template:
+    metadata:
+      labels:
+        app: go-ws-kafka
+    spec:
+      containers:
+        - name: go-ws-kafka
+          image: adel5210/go-websocket-kafka-backend:1.0.1
+          ports:
+            - containerPort: 8090
