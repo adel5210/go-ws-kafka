@@ -12,11 +12,11 @@ type HttpServer struct {
 
 func NewHttpServer() *HttpServer {
 	instance := &HttpServer{}
-	//go func() {
-	initializeController()
-	initializeWebsocket()
-	http.ListenAndServe(":8090", nil)
-	//}()
+	go func() {
+		initializeController()
+		initializeWebsocket()
+		http.ListenAndServe(":8090", nil)
+	}()
 	return instance
 }
 
