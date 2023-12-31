@@ -9,3 +9,7 @@
 - docker-compose down #Stop and remove
 ### IDE config
 - Enable "Go mod integration"
+### Push to docker hub
+- docker images
+- docker tag go-ws-kafka adel5210/go-websocket-kafka-backend:1.0.0
+- docker push adel5210/go-websocket-kafka-backend:1.0.0
