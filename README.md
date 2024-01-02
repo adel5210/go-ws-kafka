@@ -27,3 +27,5 @@
 - minikube service go-ws-kafka --url
 ### Kube setup attempt 4
 - kubectl apply -f k8s/deployment.yaml 
+### Kube deploy as service
+- kubectl apply -f k8s/service.yaml
