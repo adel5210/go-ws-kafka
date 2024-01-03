@@ -11,8 +11,8 @@
 - Enable "Go mod integration"
 ### Push to docker hub
 - docker images
-- docker tag go-ws-kafka adel5210/go-websocket-kafka-backend:1.0.0
-- docker push adel5210/go-websocket-kafka-backend:1.0.0
+- docker tag go-ws-kafka adel5210/go-websocket-kafka-backend:1.0.2
+- docker push adel5210/go-websocket-kafka-backend:1.0.2
 ### Kube setup attempt 1
 - kubectl create -f kube-go-ws-kafka-pod.yml
 - kubectl get pods
