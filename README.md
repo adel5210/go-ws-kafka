@@ -29,3 +29,7 @@
 - kubectl apply -f k8s/deployment.yaml 
 ### Kube deploy as service
 - kubectl apply -f k8s/service.yaml
+
+### Others
+- kubectl get nodes -o wide
+- kubectl get svc go-ws-kafka-ui-service
