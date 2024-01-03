@@ -2,6 +2,7 @@
 
 ### Deployment on docker
 - docker build -t go-ws-kafka .
+- docker build --no-cache -t go-ws-kafka .
 - docker run -p 8090:8090 go-ws-kafka #Foreground
 - docker run -d -p 8090:8090 go-ws-kafka #Background
 ### Deployment with docker-compose
