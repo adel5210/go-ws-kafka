@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: go-ws-kafka-ui-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: go-ws-kafka-ui
   ports:
